@@ -57,65 +57,75 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="flavors" className="py-20 px-4 bg-white">
-        <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-4">Наши вкусы</h2>
-          <p className="text-center text-gray-600 mb-16 text-lg">Два натуральных вкуса для вашего удовольствия</p>
-          
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <Card 
-              className={`p-8 cursor-pointer transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 ${
-                selectedFlavor === 'cranberry' ? 'ring-4 ring-cranberry' : ''
-              }`}
-              onClick={() => setSelectedFlavor('cranberry')}
-            >
-              <div className="flex flex-col items-center text-center">
-                <div className="w-full h-64 mb-6 rounded-2xl overflow-hidden">
-                  <img 
-                    src="https://cdn.poehali.dev/projects/7d4c4c19-aa5d-4894-b2e8-9a08f99290d8/files/8f937e7f-d1af-4894-a898-e2c86deb04f4.jpg"
-                    alt="Вода со вкусом клюквы"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="text-6xl mb-4">🫐</div>
-                <h3 className="text-3xl font-bold mb-4 text-cranberry">Клюква</h3>
-                <p className="text-gray-600 text-lg mb-6">
-                  Насыщенный кисло-сладкий вкус северной ягоды. Богата витаминами и антиоксидантами.
-                </p>
-                <div className="flex gap-2 flex-wrap justify-center">
-                  <span className="px-4 py-2 bg-red-50 text-cranberry rounded-full text-sm font-medium">Витамин C</span>
-                  <span className="px-4 py-2 bg-red-50 text-cranberry rounded-full text-sm font-medium">Антиоксиданты</span>
-                  <span className="px-4 py-2 bg-red-50 text-cranberry rounded-full text-sm font-medium">0 калорий</span>
-                </div>
-              </div>
-            </Card>
+      <section id="flavors" className="py-12 px-4 bg-white">
+        <div className="container mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-4">Наши вкусы</h2>
+          <p className="text-gray-600 text-lg mb-8">Два натуральных вкуса для вашего удовольствия</p>
+        </div>
+      </section>
 
-            <Card 
-              className={`p-8 cursor-pointer transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 ${
-                selectedFlavor === 'lemon' ? 'ring-4 ring-lemon' : ''
-              }`}
-              onClick={() => setSelectedFlavor('lemon')}
-            >
-              <div className="flex flex-col items-center text-center">
-                <div className="w-full h-64 mb-6 rounded-2xl overflow-hidden">
-                  <img 
-                    src="https://cdn.poehali.dev/projects/7d4c4c19-aa5d-4894-b2e8-9a08f99290d8/files/c8fefd1c-4486-4420-82f3-cb0af93312ca.jpg"
-                    alt="Вода со вкусом лимона"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="text-6xl mb-4">🍋</div>
-                <h3 className="text-3xl font-bold mb-4 text-lemon">Лимон</h3>
-                <p className="text-gray-600 text-lg mb-6">
-                  Свежий цитрусовый вкус с легкой кислинкой. Тонизирует и освежает в жаркий день.
-                </p>
-                <div className="flex gap-2 flex-wrap justify-center">
-                  <span className="px-4 py-2 bg-yellow-50 text-lemon rounded-full text-sm font-medium">Витамин C</span>
-                  <span className="px-4 py-2 bg-yellow-50 text-lemon rounded-full text-sm font-medium">Бодрость</span>
-                  <span className="px-4 py-2 bg-yellow-50 text-lemon rounded-full text-sm font-medium">0 калорий</span>
-                </div>
+      <section className="py-20 px-4 bg-gradient-to-br from-red-50 to-pink-50">
+        <div className="container mx-auto max-w-4xl">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1">
+              <div className="text-6xl mb-4">🫐</div>
+              <h3 className="text-4xl font-bold mb-6 text-cranberry">Клюква</h3>
+              <p className="text-gray-700 text-xl mb-8 leading-relaxed">
+                Насыщенный кисло-сладкий вкус северной ягоды. Богата витаминами и антиоксидантами. Идеальный выбор для тех, кто хочет не только утолить жажду, но и поддержать иммунитет.
+              </p>
+              <div className="flex gap-3 flex-wrap mb-8">
+                <span className="px-5 py-3 bg-white/80 text-cranberry rounded-full text-base font-semibold shadow-sm">Витамин C</span>
+                <span className="px-5 py-3 bg-white/80 text-cranberry rounded-full text-base font-semibold shadow-sm">Антиоксиданты</span>
+                <span className="px-5 py-3 bg-white/80 text-cranberry rounded-full text-base font-semibold shadow-sm">0 калорий</span>
               </div>
-            </Card>
+              <Button 
+                size="lg" 
+                onClick={() => scrollToSection('contacts')} 
+                className="bg-cranberry hover:bg-cranberry/90 text-white text-lg px-8"
+              >
+                Заказать клюквенную воду
+              </Button>
+            </div>
+            <div className="order-1 md:order-2">
+              <img 
+                src="https://cdn.poehali.dev/projects/7d4c4c19-aa5d-4894-b2e8-9a08f99290d8/files/8f937e7f-d1af-4894-a898-e2c86deb04f4.jpg"
+                alt="Вода со вкусом клюквы"
+                className="rounded-3xl shadow-2xl w-full hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 bg-gradient-to-br from-yellow-50 to-amber-50">
+        <div className="container mx-auto max-w-4xl">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <img 
+                src="https://cdn.poehali.dev/projects/7d4c4c19-aa5d-4894-b2e8-9a08f99290d8/files/c8fefd1c-4486-4420-82f3-cb0af93312ca.jpg"
+                alt="Вода со вкусом лимона"
+                className="rounded-3xl shadow-2xl w-full hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div>
+              <div className="text-6xl mb-4">🍋</div>
+              <h3 className="text-4xl font-bold mb-6 text-lemon">Лимон</h3>
+              <p className="text-gray-700 text-xl mb-8 leading-relaxed">
+                Свежий цитрусовый вкус с легкой кислинкой. Тонизирует и освежает в жаркий день. Дарит бодрость и поднимает настроение с первого глотка.
+              </p>
+              <div className="flex gap-3 flex-wrap mb-8">
+                <span className="px-5 py-3 bg-white/80 text-lemon rounded-full text-base font-semibold shadow-sm">Витамин C</span>
+                <span className="px-5 py-3 bg-white/80 text-lemon rounded-full text-base font-semibold shadow-sm">Бодрость</span>
+                <span className="px-5 py-3 bg-white/80 text-lemon rounded-full text-base font-semibold shadow-sm">0 калорий</span>
+              </div>
+              <Button 
+                size="lg" 
+                onClick={() => scrollToSection('contacts')} 
+                className="bg-lemon hover:bg-lemon/90 text-white text-lg px-8"
+              >
+                Заказать лимонную воду
+              </Button>
+            </div>
           </div>
         </div>
       </section>
