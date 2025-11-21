@@ -64,64 +64,92 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-gradient-to-br from-red-50 to-pink-50">
-        <div className="container mx-auto max-w-4xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      <section className="py-20 px-4 bg-gradient-to-br from-red-50 to-pink-50 relative overflow-hidden">
+        <div className="absolute top-10 right-10 w-32 h-32 opacity-20">
+          <div className="text-9xl">🫐</div>
+        </div>
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="order-2 md:order-1">
-              <div className="text-6xl mb-4">🫐</div>
-              <h3 className="text-4xl font-bold mb-6 text-cranberry">Клюква</h3>
-              <p className="text-gray-700 text-xl mb-8 leading-relaxed">
-                Насыщенный кисло-сладкий вкус северной ягоды. Богата витаминами и антиоксидантами. Идеальный выбор для тех, кто хочет не только утолить жажду, но и поддержать иммунитет.
+              <h3 className="text-5xl font-bold mb-8 text-cranberry">Напиток безалкогольный газированный со вкусом клюквы 0,5 л</h3>
+              
+              <p className="text-gray-800 text-lg mb-6 leading-relaxed">
+                Этот напиток сочетает в себе чистоту природной воды, яркий вкус спелой клюквы и легкую сладость, которая подчеркивает натуральность продукта.
               </p>
-              <div className="flex gap-3 flex-wrap mb-8">
-                <span className="px-5 py-3 bg-white/80 text-cranberry rounded-full text-base font-semibold shadow-sm">Витамин C</span>
-                <span className="px-5 py-3 bg-white/80 text-cranberry rounded-full text-base font-semibold shadow-sm">Антиоксиданты</span>
-                <span className="px-5 py-3 bg-white/80 text-cranberry rounded-full text-base font-semibold shadow-sm">0 калорий</span>
+              
+              <p className="text-gray-800 text-lg mb-8 leading-relaxed">
+                Клюква известна своими полезными свойствами: она богата антиоксидантами, поддерживает иммунитет и помогает сохранять бодрость в течение дня. Наша вода со вкусом клюквы — это идеальный выбор для тех, кто ищет вкусный и освежающий напиток с натуральным вкусом.
+              </p>
+
+              <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-cranberry/20">
+                <h4 className="font-bold text-lg mb-3 text-cranberry">Состав:</h4>
+                <p className="text-gray-700 text-sm leading-relaxed">
+                  Вода питьевая природная, сахар, регулятор кислотности — лимонная кислота (E330), концентрированный сок черной моркови, натуральный ароматизатор, консерванты — бензоат натрия (E211), сорбат калия (E202)
+                </p>
               </div>
+
               <Button 
                 size="lg" 
                 onClick={() => scrollToSection('contacts')} 
-                className="bg-cranberry hover:bg-cranberry/90 text-white text-lg px-8"
+                className="bg-cranberry hover:bg-cranberry/90 text-white text-lg px-10 shadow-lg"
               >
                 Заказать клюквенную воду
               </Button>
             </div>
             <div className="order-1 md:order-2">
-              <img 
-                src="https://cdn.poehali.dev/projects/7d4c4c19-aa5d-4894-b2e8-9a08f99290d8/files/8f937e7f-d1af-4894-a898-e2c86deb04f4.jpg"
-                alt="Вода со вкусом клюквы"
-                className="rounded-3xl shadow-2xl w-full hover:scale-105 transition-transform duration-300"
-              />
+              <div className="relative">
+                <img 
+                  src="https://cdn.poehali.dev/files/bf84c4ac-a4d5-4d9d-947d-47183f49b0b9.png"
+                  alt="Напиток со вкусом клюквы"
+                  className="w-full hover:scale-105 transition-transform duration-300"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-gradient-to-br from-yellow-50 to-amber-50">
-        <div className="container mx-auto max-w-4xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      <section className="py-20 px-4 bg-gradient-to-br from-yellow-50 to-amber-50 relative overflow-hidden">
+        <div className="absolute top-10 left-10 w-32 h-32 opacity-20">
+          <div className="text-9xl">🍋</div>
+        </div>
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <img 
-                src="https://cdn.poehali.dev/projects/7d4c4c19-aa5d-4894-b2e8-9a08f99290d8/files/c8fefd1c-4486-4420-82f3-cb0af93312ca.jpg"
-                alt="Вода со вкусом лимона"
-                className="rounded-3xl shadow-2xl w-full hover:scale-105 transition-transform duration-300"
-              />
+              <div className="relative">
+                <img 
+                  src="https://cdn.poehali.dev/files/12b74a27-a5ed-45ee-ae48-356ecfa08da9.png"
+                  alt="Вода питьевая негазированная со вкусом лимона"
+                  className="w-full hover:scale-105 transition-transform duration-300"
+                />
+              </div>
             </div>
             <div>
-              <div className="text-6xl mb-4">🍋</div>
-              <h3 className="text-4xl font-bold mb-6 text-lemon">Лимон</h3>
-              <p className="text-gray-700 text-xl mb-8 leading-relaxed">
-                Свежий цитрусовый вкус с легкой кислинкой. Тонизирует и освежает в жаркий день. Дарит бодрость и поднимает настроение с первого глотка.
+              <h3 className="text-5xl font-bold mb-8 text-lemon">Вода питьевая негазированная со вкусом лимона 0,5 л</h3>
+              
+              <p className="text-gray-800 text-lg mb-6 leading-relaxed">
+                Вода со вкусом лимона сочетает в себе чистоту воды, натуральный вкус спелого лимона и легкую сладость, которая делает его идеальным для любого момента дня.
               </p>
-              <div className="flex gap-3 flex-wrap mb-8">
-                <span className="px-5 py-3 bg-white/80 text-lemon rounded-full text-base font-semibold shadow-sm">Витамин C</span>
-                <span className="px-5 py-3 bg-white/80 text-lemon rounded-full text-base font-semibold shadow-sm">Бодрость</span>
-                <span className="px-5 py-3 bg-white/80 text-lemon rounded-full text-base font-semibold shadow-sm">0 калорий</span>
+              
+              <p className="text-gray-800 text-lg mb-6 leading-relaxed">
+                Лимон не только придает воде яркий, освежающий вкус, но и помогает поддерживать баланс витаминов в организме, улучшает пищеварение и дарит ощущение легкости.
+              </p>
+
+              <p className="text-gray-800 text-lg mb-8 leading-relaxed">
+                Сахар добавлен в минимальном количестве, чтобы подчеркнуть натуральный вкус лимона, это прекрасный выбор для тех, кто ищет вкусный и полезный напиток.
+              </p>
+
+              <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-lemon/20">
+                <h4 className="font-bold text-lg mb-3 text-lemon">Состав:</h4>
+                <p className="text-gray-700 text-sm leading-relaxed">
+                  Вода питьевая природная, глюкозно-фруктозный сироп, регулятор кислотности — лимонная кислота (E330), натуральный ароматизатор консерванты — бензоат натрия (E211), сорбат калия (E202)
+                </p>
               </div>
+
               <Button 
                 size="lg" 
                 onClick={() => scrollToSection('contacts')} 
-                className="bg-lemon hover:bg-lemon/90 text-white text-lg px-8"
+                className="bg-lemon hover:bg-lemon/90 text-white text-lg px-10 shadow-lg"
               >
                 Заказать лимонную воду
               </Button>
